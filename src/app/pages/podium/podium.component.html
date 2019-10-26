@@ -1,0 +1,20 @@
+<div id="root">
+  <section class="container">
+    <h1 id="title">Thumbwar</h1>
+  </section>
+  <section class="container" *ngIf="isWinner; else loseContainer">
+    <fa-icon class="podium-icon" [icon]="icons.award"></fa-icon>
+    <h3 class="podium-text">You Win!</h3>
+  </section>
+  <ng-template #loseContainer>
+    <section class="container">
+      <fa-icon class="podium-icon" [icon]="icons.skull"></fa-icon>
+      <h3 class="podium-text">You Lose</h3>
+    </section>
+  </ng-template>
+  <section class="container">
+    <button class="button" (click)="reload()" [disabled]="reloadDisabled">
+      <fa-icon [icon]="icons.reload"></fa-icon>
+    </button>
+  </section>
+</div>

@@ -1,1 +1,263 @@
-/* You can add global styles to this file, and also import other style files */
+@import (css)
+  'https://fonts.googleapis.com/css?family=Bangers|Roboto:300,400,700&display=swap';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #444;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#title {
+  font-family: 'Bangers', sans-serif;
+  font-size: 5rem;
+  color: #bf0300;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.message {
+  font-size: 1.5rem;
+  color: #bf0300;
+
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+}
+
+.container {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  height: 82px;
+  border-radius: 16px;
+  border: 2px solid #bf0300;
+  overflow: hidden;
+
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 82px;
+    font-size: 2rem;
+  }
+
+  input {
+    height: 100%;
+    width: calc(100% - 82px);
+    font-size: 2rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  input::placeholder {
+    color: #ccc;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 124px;
+  width: 124px;
+  font-size: 2.5rem;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  background-color: #bf0300;
+  box-shadow: 0 8px 0 0 #800200;
+  transition: box-shadow 0.3s, margin-top 0.3s;
+
+  &:active {
+    margin-top: 8px;
+    box-shadow: 0 0 0 0 #800200;
+  }
+
+  &:disabled {
+    margin-top: 8px;
+    box-shadow: 0 0 0 0 #800200;
+  }
+
+  &.reverse > * {
+    transform: rotateZ(180deg);
+  }
+}
+
+.room {
+  font-size: 3rem;
+  margin-bottom: 24px;
+
+  span {
+    margin-left: 16px;
+  }
+}
+
+.players {
+  font-size: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  .status,
+  .icon {
+    margin-right: 16px;
+  }
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

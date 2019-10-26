@@ -1,0 +1,35 @@
+.score-bar-container {
+  height: 56px;
+  width: calc(100% + 48px);
+  background-color: #800200;
+}
+
+.score-bar-container .score-bar {
+  height: 100%;
+  background-color: #bf0300;
+}
+
+.players {
+  margin-top: 24px;
+}
+
+.counter-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  span {
+    font-family: 'Bangers', sans-serif;
+    font-size: 10rem;
+    color: #bf0300;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+  }
+}

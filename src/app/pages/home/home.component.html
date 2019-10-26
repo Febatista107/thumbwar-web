@@ -1,0 +1,47 @@
+<form id="root" #joinForm="ngForm" (submit)="join()">
+  <section class="container">
+    <h1 id="title">Thumbwar</h1>
+  </section>
+  <section class="container">
+    <div class="field">
+      <label for="roomField">
+        <fa-icon [icon]="icons.couch"></fa-icon>
+      </label>
+      <input
+        type="text"
+        id="roomField"
+        name="roomField"
+        [(ngModel)]="roomName"
+        #roomField="ngModel"
+        minlength="3"
+        maxlength="5"
+        required
+        placeholder="Room"
+      />
+    </div>
+    <div class="field">
+      <label for="playerField">
+        <fa-icon [icon]="icons.user"></fa-icon>
+      </label>
+      <input
+        type="text"
+        id="playerField"
+        name="playerField"
+        [(ngModel)]="playerName"
+        #playerField="ngModel"
+        minlength="3"
+        maxlength="5"
+        required
+        placeholder="Player"
+      />
+    </div>
+    <span class="message" *ngIf="isFull"
+      >The room you are trying to join is full</span
+    >
+  </section>
+  <section class="container">
+    <button class="button" type="submit" [disabled]="joinForm.invalid">
+      <fa-icon [icon]="icons.play"></fa-icon>
+    </button>
+  </section>
+</form>

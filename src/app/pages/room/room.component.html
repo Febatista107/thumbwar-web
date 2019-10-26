@@ -1,0 +1,30 @@
+<div id="root">
+  <section class="container">
+    <h1 id="title">Thumbwar</h1>
+  </section>
+  <section class="container" *ngIf="room$ | async as room">
+    <h3 class="room">
+      <fa-icon [icon]="icons.couch"></fa-icon>
+      <span>{{ room.name }}</span>
+    </h3>
+    <div class="players">
+      <div *ngFor="let player of room.players">
+        <span class="status">
+          <fa-icon
+            [icon]="icons.check"
+            *ngIf="player.status == 'ready'; else preparingIcon"
+          ></fa-icon>
+          <ng-template #preparingIcon>
+            <fa-icon [icon]="icons.clock"></fa-icon>
+          </ng-template>
+        </span>
+        <span class="name">{{ player.name }}</span>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <button class="button" (click)="ready()">
+      <fa-icon [icon]="icons.check"></fa-icon>
+    </button>
+  </section>
+</div>

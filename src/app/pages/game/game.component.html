@@ -1,0 +1,30 @@
+<div id="root">
+  <section class="container">
+    <button class="button reverse">
+      <fa-icon [icon]="icons.exclamation"></fa-icon>
+    </button>
+  </section>
+  <section class="container" *ngIf="room$ | async as room">
+    <h3 class="room">
+      <fa-icon [icon]="icons.couch"></fa-icon>
+      <span>{{ room.name }}</span>
+    </h3>
+    <div class="score-bar-container">
+      <div class="score-bar" [style.width.%]="myScore"></div>
+    </div>
+    <div class="players">
+      <div *ngFor="let player of room.players">
+        <fa-icon class="icon" [icon]="icons.user"></fa-icon>
+        <span class="name">{{ player.name }}</span>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <button class="button" (click)="press()">
+      <fa-icon [icon]="icons.exclamation"></fa-icon>
+    </button>
+  </section>
+  <div class="counter-container" *ngIf="counter > 0">
+    <span>{{ counter - 1 > 0 ? counter - 1 : 'Go!' }}</span>
+  </div>
+</div>
