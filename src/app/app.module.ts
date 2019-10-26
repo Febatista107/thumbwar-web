@@ -6,7 +6,7 @@ import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 
 const config: SocketIoConfig = {
-  url: 'http://localhost:3000',
+  url: 'http://thumbwar-api.herokuapp.com',
   options: {}
 };
 
