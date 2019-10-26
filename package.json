@@ -5,11 +5,10 @@
     "ng": "ng",
     "start:dev": "ng serve --host 0.0.0.0",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "e2e": "ng e2e"
   },
   "engines": {
     "node": "10.13.0",
